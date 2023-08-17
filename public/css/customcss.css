@@ -1,0 +1,31 @@
+/* Estilos para la tabla */
+.custom-table {
+    border-collapse: separate;
+    border-spacing: 0 5px; /* Espacio vertical entre filas */
+    width: 96%;
+    margin: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    
+  }
+  
+  /* Estilos para las celdas de encabezado */
+  .custom-table th {
+    background-color: #f2f2f2;
+    padding: 8px;
+  }
+  
+  /* Estilos para las filas */
+  .custom-table tbody tr {
+    background-color: #ffffff;
+    border: 1px solid #ddd ;
+    padding: 8px;
+    border-radius: 100px !important;
+  }
+  
+  
+  /* Estilos para las celdas de datos */
+  .custom-table td {
+    padding: 8px;
+  }
+  

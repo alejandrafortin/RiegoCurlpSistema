@@ -1,0 +1,63 @@
+<%- include("templates/header.template.ejs", {titulo: "Titulo " }) %>
+    <%- include("templates/nav.template.ejs") %>
+        <br>
+        <br>
+        <div class="container bg-light mt-10 mb-10" style=" width: 95%;
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            height: 400px;
+                                                            min-height: 400px;
+                                                            border-radius: 5px;
+                                                            margin-top: 0;">
+            <div class="container mt-10" style="position: relative; ">
+                <div class="mb-3">
+                    <h1 style="text-align: center; font-family: 'Poppins 700', sans-serif;"> Ultimo registro</h1>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            
+                            <th>Hora</th>
+                            <th>Humedad Suelo</th>
+                            <th>Temperatura Ambiente</th>
+                            <th>Humedad Ambiente</th>
+                            <th>Lluvia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                
+                                <td>
+                                    <%= riego.hora %>
+                                </td>
+                                <td>
+                                    <%= riego.humedadTierra %>
+                                </td>
+                                <td>
+                                    <%= riego.temperaturaAmbiente+" °C" %>
+                                </td>
+                                <td>
+                                    <%= riego.humedadAmbiente+ "°F"%>
+                                </td>
+                                <td>
+                                    <%= riego.sensorLluvia %>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <form id="redireccionForm" action="/ultimo" method="GET">
+                <input type="hidden" name="idEstudiante">
+            </form>
+
+
+        </div>
+        <script>
+            // Función para enviar el formulario después de 3 segundos
+            setTimeout(() => {
+                document.getElementById('redireccionForm').submit();
+            },15000);
+        </script>
+
+        <%- include("templates/footer.template.ejs") %>
